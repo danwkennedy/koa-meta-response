@@ -6,11 +6,18 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "keywords": [
     "KOA",
     "meta",
     "response"
   ],
   "author": "Daniel Kennedy",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danwkennedy/koa-meta-response"
+  },
+  "license": "MIT"
 }
