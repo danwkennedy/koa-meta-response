@@ -1,0 +1,16 @@
+{
+  "name": "koa-meta-response",
+  "version": "1.0.0",
+  "description": "Adds a meta section to KOA responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "KOA",
+    "meta",
+    "response"
+  ],
+  "author": "Daniel Kennedy",
+  "license": "ISC"
+}
