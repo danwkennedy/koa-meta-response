@@ -1,18 +1,18 @@
 'use strict';
 
-module.exports = function *(next) {
-    this.state.meta = {};
+module.exports = function *metaResponse(next) {
+  this.state.meta = {};
 
-    yield next;
+  yield next;
 
-    if (this.status == 204) {
-      return;
-    }
+  if (this.status === 204) {
+    return;
+  }
 
-    let payload = {
-      meta: this.state.meta,
-      response: this.body
-    };
+  let payload = {
+    meta: this.state.meta,
+    response: this.body
+  };
 
-    this.body = payload;
+  this.body = payload;
 };
