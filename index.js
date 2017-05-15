@@ -1,18 +1,16 @@
-'use strict';
+module.exports = async function metaResponse(ctx, next) {
+  ctx.state.meta = {};
 
-module.exports = function *metaResponse(next) {
-  this.state.meta = {};
-
-  yield next;
+  await next;
 
   if (this.status === 204) {
     return;
   }
 
   let payload = {
-    meta: this.state.meta,
-    response: this.body
+    meta: ctx.state.meta,
+    response: ctx.response.body
   };
 
-  this.body = payload;
+  ctx.response.body = payload;
 };
