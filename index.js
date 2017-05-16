@@ -1,7 +1,7 @@
 module.exports = async function metaResponse(ctx, next) {
   ctx.state.meta = {};
 
-  await next;
+  await next();
 
   if (this.status === 204) {
     return;
